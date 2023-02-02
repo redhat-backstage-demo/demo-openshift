@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: demo-openshift
+spec:
+  destination:
+    namespace: user1-bgd
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: manifests
+    repoURL: https://github.com/redhat-backstage-demo/demo-openshift
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: false

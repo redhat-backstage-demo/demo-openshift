@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: demo-openshift
+    backstage.io/kubernetes-id: demo-openshift
+  name: demo-openshift
+spec:
+  port:
+    targetPort: 3000
+  to:
+    kind: Service
+    name: demo-openshift
+    weight: 100

@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: demo-openshift
+    backstage.io/kubernetes-id: demo-openshift
+  name: demo-openshift
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 3000
+  selector:
+    app: demo-openshift

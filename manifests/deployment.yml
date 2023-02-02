@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: demo-openshift
+    backstage.io/kubernetes-id: demo-openshift
+  name: demo-openshift
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: demo-openshift
+  template:
+    metadata:
+      labels:
+        app: demo-openshift
+    spec:
+      containers:
+        - image: quay.io/jfargett/demo-openshift:latest
+          name: demo-openshift
+          resources: {}

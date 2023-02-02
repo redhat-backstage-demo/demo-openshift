@@ -1,0 +1,4 @@
+site_name: 'demo-openshift'
+
+nav:
+  - Home: index.md

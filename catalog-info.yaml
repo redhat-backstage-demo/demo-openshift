@@ -1,0 +1,14 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "demo-openshift"
+  description: "rhte"
+  annotations:
+    argocd/app-name: "demo-openshift"
+    backstage.io/kubernetes-id: "demo-openshift"
+    backstage.io/techdocs-ref: dir:.
+    github.com/project-slug: redhat-backstage-demo/demo-openshift
+spec:
+  type: website
+  lifecycle: production
+  owner: "group: team-a"
